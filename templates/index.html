@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Abalone Rings </title>
+   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+
+<body style="background: #000">
+  <div class="container">
+      <h1>Abalone rings prediction</h1>
+    <form action="{{ url_for('predict')}}" method="post" id="abalone">
+      <p>This model predicts the number of rings of an abalone. To find its age, simply add 1.5</p>
+
+      <select name="gender" id="gender">
+        <option value="" selected disabled hidden>Gender</option>
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+        <option value="2">Infact</option>
+      </select>
+
+      <input type="text" name="length" placeholder="Length (0.05-0.9)" required="required"/>
+      <input type="text" name="diameter" placeholder="Diameter (0.05-0.7)" required="required"/>
+      <input type="text" name="height" placeholder="Height (0-1.15)" required="required"/>
+      <input type="text" name="wweight" placeholder="Whole weight (0.002-2.9)" required="required"/>
+      <input type="text" name="sweight" placeholder="Shucked weight (0.001-1.5)" required="required"/>
+      <input type="text" name="vweight" placeholder="Viscera weight (0.0005-0.8)" required="required"/>
+      <input type="text" name="shellweight" placeholder="Shell weight (0.001-1.01)" required="required"/>
+    </form>
+    <button type="submit" class="btn" form="abalone">Predict</button>
+
+    <br>
+    {{ prediction_text }}
+
+  </div>
+
+
+
+
+</body>
+
+
+
+</html>
