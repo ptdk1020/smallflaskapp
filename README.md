@@ -5,5 +5,5 @@ This is project where I predict an abalone's age based on its physical measureme
 
 ~~My app can be found [here](https://abaloneringsprediction.herokuapp.com/). Note that it could take a little longer to load the first time since the Heroku container could be asleep.~~
 
-_2023 Note: since Heroku no longer has a free tier, the above link no longer works._
+_2023 Note: since Heroku no longer has a free tier, the above link does not work._
 
